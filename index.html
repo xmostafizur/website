@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Mostafizur Rahman's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF; /* Light Blue */
+            font-family: 'Georgia', serif; /* Beautiful Font */
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        h2 {
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #003366; /* Dark Blue */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .dark-white {
+            background-color: #f0f0f0; /* Dark White */
+            color: #000; /* Black text color */
+        }
+
+        .button {
+            background-color: #003366; /* Dark Blue */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            border-radius: 5px;
+            margin: 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex; /* For Flexbox */
+            align-items: center; /* Center Alignment */
+            justify-content: center; /* Center Alignment */
+        }
+
+        .button img {
+            width: 20px; /* Icon Width */
+            height: 20px; /* Icon Height */
+            margin-right: 8px; /* Space between button text */
+        }
+
+        .button:hover {
+            background-color: #00509e; /* Change color on hover */
+        }
+
+        .profile-table {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .lang-toggle {
+            margin-bottom: 20px;
+            background-color: #007BFF; /* Light Blue */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* New Styling */
+        .name-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .name {
+            color: #006400; /* Dark Green */
+            font-family: 'Georgia', serif; /* Beautiful Font */
+            font-size: 24px; /* Font Size */
+        }
+
+        .about-text {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        /* Added Style for Name under Profile Picture */
+        .name-below-pic {
+            font-family: 'Georgia', serif; /* Beautiful Font */
+            font-size: 20px; /* Font Size */
+            color: #003366; /* Dark Blue */
+            text-align: center;
+            margin-top: 10px; /* Space from the picture */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#personal-info">Personal Info</a></li>
+                <li><a href="#career-info">Career Info</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#social-media">Social Media</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <button class="lang-toggle" onclick="toggleLanguage()">English / বাংলা</button>
+                <table class="name-table">
+                    <tr class="dark-white">
+                        <td><h1 class="name" id="name">Md. Mostafizur Rahman Rahiyan</h1></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://i.postimg.cc/BnvC5XV8/IMG-20240918-WA0007.png" alt="Profile Picture" class="profile-pic">
+                            <div class="name-below-pic">Md. Mostafizur Rahman Rahiyan</div>
+                        </td>
+                    </tr>
+                </table>
+            </header>
+
+            <section id="personal-info">
+                <h2>Personal Info</h2>
+                <table>
+                    <tr>
+                        <th class="dark-white">Field</th>
+                        <th id="personal-info-value">Information</th>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Date of Birth</td>
+                        <td id="dob">March 9, 2006</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Mobile Number</td>
+                        <td id="phone">01405985541</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Email</td>
+                        <td id="email">mdmostafizur45845@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Current Address</td>
+                        <td id="current-address">Gazipur, Dhaka</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Permanent Address</td>
+                        <td id="permanent-address">Kapasia, Gazipur</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="career-info">
+                <h2>Career Info</h2>
+                <table>
+                    <tr>
+                        <th class="dark-white">Field</th>
+                        <th id="career-info-value">Information</th>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Educational Qualification</td>
+                        <td id="education">Textile Engineering</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">College Name</td>
+                        <td id="college">BGIFT Institute of Science & Technology, Gazipur</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">JSC</td>
+                        <td id="jsc">Dhaka Ideal School and College</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">SSC</td>
+                        <td id="ssc">Bangabandhu Sheikh Mujibur Rahman Agricultural University School</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Career Goal</td>
+                        <td id="goal">To work at a higher level in the textile industry</td>
+                    </tr>
+                    <tr>
+                        <td class="dark-white">Hobbies</td>
+                        <td id="hobbies">Listening to music, playing Free Fire, browsing the internet</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="about">
+                <h2>About</h2>
+                <p class="about-text" id="about-text-en">Md. Mostafizur Rahman (born March 9, 2006) is a Bangladeshi student currently studying Textile Engineering at BGIFT Institute of Science and Technology in Gazipur. He is in his first semester (2024) and dreams of working at a higher level in the textile industry. He completed his Junior School Certificate (JSC) from Dhaka Ideal School and College and his Secondary School Certificate (SSC) from Bangabandhu Sheikh Mujibur Rahman Agricultural University School. He enjoys listening to music, playing Free Fire, and browsing the internet. Mostafizur Rahman is active on social media. His commitment to academic excellence and future planning is leading him to make significant contributions to the textile industry in Bangladesh.</p>
+                <p class="about-text" id="about-text-bn" style="display: none;">মোস্তাফিজুর রহমান (জন্ম 9 মার্চ, 2006) একজন বাংলাদেশী ছাত্র যিনি বর্তমানে গাজীপুরের বিজিআইএফটি ইনস্টিটিউট অফ সায়েন্স অ্যান্ড টেকনোলজিতে টেক্সটাইল ইঞ্জিনিয়ারিং অধ্যয়নরত। তিনি (২০২৪) তার প্রথম সেমিস্টারে আছেন এবং টেক্সটাইল শিল্পে উচ্চ স্তরে কাজ করার স্বপ্ন দেখেন। তিনি ঢাকা আইডিয়াল স্কুল অ্যান্ড কলেজ থেকে জুনিয়র স্কুল সার্টিফিকেট (জেএসসি) এবং বঙ্গবন্ধু শেখ মুজিবুর রহমান কৃষি বিশ্ববিদ্যালয় স্কুল থেকে তার মাধ্যমিক স্কুল সার্টিফিকেট (এসএসসি) সম্পন্ন করেন। তিনি গান শুনতে, ফ্রি ফায়ার বাজানো এবং ইন্টারনেট ব্রাউজিং উপভোগ করেন। মোস্তাফিজুর রহমান সোশ্যাল মিডিয়ায় সক্রিয় আছেন। একাডেমিক উৎকর্ষতা এবং ভবিষ্যৎ পরিকল্পনার প্রতি তার প্রতিশ্রুতি তাকে বাংলাদেশের বস্ত্র শিল্পে গুরুত্বপূর্ণ অবদান রাখার দিকে পরিচালিত করছে।</p>
+            </section>
+
+            <section id="social-media">
+                <h2>Social Media</h2>
+                <button class="button" onclick="window.open('https://t.me/xmostafizur', '_blank');">
+                    <img src="https://i.postimg.cc/x878hj2P/2504941.png" alt="Telegram Logo"> Telegram
+                </button>
+                <button class="button" onclick="window.open('https://www.facebook.com/xmostafizur', '_blank');">
+                    <img src="https://i.postimg.cc/DZvSbY61/2504903.png" alt="Facebook Logo"> Facebook
+                </button>
+                <button class="button" onclick="window.open('https://www.tiktok.com/@attitude_boy_5022', '_blank');">
+                    <img src="https://i.postimg.cc/Kj440kdz/15713399.png" alt="TikTok Logo"> TikTok
+                </button>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        let isBangla = false; // Starting with English
+
+        function toggleLanguage() {
+            if (isBangla) {
+                document.getElementById("name").innerText = "Md. Mostafizur Rahman";
+                document.getElementById("dob").innerText = "March 9, 2006";
+                document.getElementById("phone").innerText = "01405985541";
+                document.getElementById("email").innerText = "mdmostafizur45845@gmail.com";
+                document.getElementById("current-address").innerText = "Gazipur, Dhaka";
+                document.getElementById("permanent-address").innerText = "Kapasia, Gazipur";
+                document.getElementById("education").innerText = "Textile Engineering";
+                document.getElementById("college").innerText = "BGIFT Institute of Science & Technology, Gazipur";
+                document.getElementById("jsc").innerText = "Dhaka Ideal School and College";
+                document.getElementById("ssc").innerText = "Bangabandhu Sheikh Mujibur Rahman Agricultural University School";
+                document.getElementById("goal").innerText = "To work at a higher level in the textile industry";
+                document.getElementById("hobbies").innerText = "Listening to music, playing Free Fire, browsing the internet";
+                document.getElementById("about-text-bn").style.display = "none"; // Hide Bangla text
+                document.getElementById("about-text-en").style.display = "block"; // Show English text
+            } else {
+                document.getElementById("name").innerText = "মো. মোস্তাফিজুর রহমান";
+                document.getElementById("dob").innerText = "২০০৬ সালের ৯ই মার্চ";
+                document.getElementById("phone").innerText = "01405985541";
+                document.getElementById("email").innerText = "mdmostafizur45845@gmail.com";
+                document.getElementById("current-address").innerText = "গাজীপুর, ঢাকা";
+                document.getElementById("permanent-address").innerText = "কাপাসিয়া, গাজীপু";
+                document.getElementById("education").innerText = "টেক্সটাইল ইঞ্জিনিয়ার";
+                document.getElementById("college").innerText = "BGIFT Institute of Science & Technology, গাজীপুর";
+                document.getElementById("jsc").innerText = "ঢাকা আইডিয়াল স্কুল অ্যান্ড কলেজ";
+                document.getElementById("ssc").innerText = "বঙ্গবন্ধু শেখ মুজিবুর রহমান কৃষি বিশ্ববিদ্যালয় স্কুল";
+                document.getElementById("goal").innerText = "টেক্সটাইল ইন্ডাস্ট্রিতে বড় পর্যায়ের চাকরি করা";
+                document.getElementById("hobbies").innerText = "গান শোনা, ফ্রি ফায়ার গেম খেলা, ইন্টারনেট ব্রাউজিং করা";
+                document.getElementById("about-text-en").style.display = "none"; // Hide English text
+                document.getElementById("about-text-bn").style.display = "block"; // Show Bangla text
+            }
+            isBangla = !isBangla; // Toggle the language state
+        }
+    </script>
+</body>
+</html>
